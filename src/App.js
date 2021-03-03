@@ -1,43 +1,19 @@
-import React, { Component } from "react";
+import React from "react";
+import Form from "./Form";
+import Formpractice from "./Formpractice";
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      firstName: "",
-      lastName: "",
-    };
-    this.handleChange = this.handleChange.bind(this);
-  }
-
-  handleChange(event) {
-    this.setState({
-      [event.target.name]: event.target.value,
-    });
-  }
-
-  render() {
-    return (
-      <form>
-        <input
-          type="text"
-          name="firstName"
-          placeholder="First Name"
-          onChange={this.handleChange}
-        />
-        <br />
-        <input
-          type="text"
-          name="lastName"
-          placeholder="Last Name"
-          onChange={this.handleChange}
-        />
-        <h1>
-          {this.state.firstName} {this.state.lastName}
-        </h1>
-      </form>
-    );
-  }
+function App() {
+  return (
+    <>
+      <h1>Form Practice</h1>
+      <div className="Container">
+        <Form />
+      </div>
+      <div className="Containertest">
+        <Formpractice />
+      </div>
+    </>
+  );
 }
 
 export default App;
